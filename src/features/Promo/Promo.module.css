@@ -1,0 +1,30 @@
+.bg {
+    position: relative;
+    height: 100dvh;
+
+
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    height: 35%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    z-index: 2;
+
+    border-radius: 20px;
+
+    & h1 {
+        font-size: calc(1vw + 25px) ;
+    }
+}
