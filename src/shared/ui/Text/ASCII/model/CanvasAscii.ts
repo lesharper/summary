@@ -92,7 +92,7 @@ export class CanvAscii {
                 uTime: { value: 0 },
                 mouse: { value: 1.0 },
                 uTexture: { value: this.texture },
-                uEnableWaves: { value: this.enableWaves ? 0.2 : 0.0 },
+                uEnableWaves: { value: this.enableWaves ? 0.5 : 0.0 },
             },
         })
 

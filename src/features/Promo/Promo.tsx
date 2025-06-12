@@ -8,8 +8,8 @@ export const Promo = () => {
             <div className={styles.info}>
                 <ASCIIText
                     text="Hey!"
-                    enableWaves={true}
-                    asciiFontSize={10}
+                    enableWaves={false}
+                    asciiFontSize={15}
                     textFontSize={400}
                     planeBaseHeight={10}
                     textColor={'yellow'}
