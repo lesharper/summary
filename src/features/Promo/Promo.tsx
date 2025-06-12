@@ -1,11 +1,19 @@
 import styles from './Promo.module.css'
 import { Dither } from '@/shared/ui/Backgrounds/Dither'
+import { ASCIIText } from '@/shared/ui/Text/ASCII/AsciiText'
 
 export const Promo = () => {
     return (
         <article className={styles.bg}>
             <div className={styles.info}>
-                <h1>Добро пожаловать</h1>
+                <ASCIIText
+                    text="Hey!"
+                    enableWaves={true}
+                    asciiFontSize={10}
+                    textFontSize={400}
+                    planeBaseHeight={10}
+                    textColor={'yellow'}
+                />
             </div>
             <Dither
                 waveColor={[0.5, 0.5, 0.5]}
