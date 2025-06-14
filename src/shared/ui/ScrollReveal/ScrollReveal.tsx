@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useMemo, ReactNode, RefObject } from 'react'
+'use client'
+
+import React, { useEffect, useRef, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './ScrollReveal.css'
+import styles from './ScrollReveal.module.css'
 import { ScrollRevealProps } from '@/shared/ui/ScrollReveal/types'
+import { getClassName } from '@/shared/helpers/getClassNames'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -26,7 +29,8 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
             if (word.match(/^\s+$/)) return word
             return (
                 <span
-                    className="word"
+                    id="word"
+                    className={styles.word}
                     key={index}
                 >
                     {word}
@@ -58,7 +62,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
             },
         )
 
-        const wordElements = el.querySelectorAll<HTMLElement>('.word')
+        const wordElements = el.querySelectorAll<HTMLElement>('#word')
 
         gsap.fromTo(
             wordElements,
@@ -112,9 +116,9 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     return (
         <h2
             ref={containerRef}
-            className={`scroll-reveal ${containerClassName}`}
+            className={getClassName(styles.scroll_reveal, containerClassName)}
         >
-            <p className={`scroll-reveal-text ${textClassName}`}>{splitText}</p>
+            <p className={getClassName(styles.scroll_reveal_text, textClassName)}>{splitText}</p>
         </h2>
     )
 }

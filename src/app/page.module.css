@@ -11,8 +11,7 @@
     background: black;
 }
 
-.title {
-    .text {
-        font-size: 45px;
-    }
+.text.text {
+    color: white;
+    font-size: clamp(1.6rem, 4vw, 1.5rem);
 }
