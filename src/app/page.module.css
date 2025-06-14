@@ -1,0 +1,18 @@
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: clamp(0px, 80dvw, 1500px);
+    border: 1px solid crimson;
+
+    margin: 0 auto;
+
+    background: black;
+}
+
+.title {
+    .text {
+        font-size: 45px;
+    }
+}

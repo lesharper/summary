@@ -5,6 +5,8 @@ import styles from './Dither.module.css'
 import { DitherProps } from '@/shared/ui/Backgrounds/Dither/types'
 import { DitheredWaves } from '@/shared/ui/Backgrounds/Dither/components/DitheredWaves'
 import { useEffect, useState } from 'react'
+import { useIsClient } from 'usehooks-ts'
+import { getClassName } from '@/shared/helpers/getClassNames'
 
 export const Dither = ({
     waveSpeed = 0.05,
@@ -17,13 +19,9 @@ export const Dither = ({
     enableMouseInteraction = true,
     mouseRadius = 1,
 }: DitherProps) => {
-    const [isRendered, setRendered] = useState(false)
+    const isClient = useIsClient()
 
-    useEffect(() => {
-        setRendered(true)
-    }, [])
-
-    if (!isRendered) return null
+    if (!isClient) return <div className={getClassName(styles.placeholder)}>aaa</div>
 
     return (
         <Canvas
