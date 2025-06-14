@@ -1,6 +1,9 @@
 import styles from './page.module.css'
 import { Promo } from '@/features/Promo'
 import { ScrollReveal } from '@/shared/ui/ScrollReveal'
+import { ScrollFloat } from '@/shared/ui/ScrollFloat'
+import { StarBorder } from '@/shared/ui/StarBorder'
+import { ShinyText } from '@/shared/ui/Text/Shiny'
 
 export default function Home() {
     return (
@@ -8,16 +11,19 @@ export default function Home() {
             <Promo />
 
             <div className={styles.screen}>
-                {/* <ScrollFloat
+                <ScrollFloat
                     animationDuration={2}
                     ease="back.inOut(2)"
                     scrollStart="center bottom+=50%"
                     scrollEnd="bottom bottom-=40%"
+                    textClassName={styles.title}
                 >
                     Frontend - разработчик
-                </ScrollFloat>*/}
+                </ScrollFloat>
+            </div>
 
-                {/*<StarBorder
+            <div className={styles.screen}>
+                <StarBorder
                     as="div"
                     speed={3}
                 >
@@ -25,8 +31,10 @@ export default function Home() {
                         text="Next"
                         speed={3}
                     />
-                </StarBorder>*/}
+                </StarBorder>
+            </div>
 
+            <div className={styles.screen}>
                 <ScrollReveal
                     baseOpacity={0}
                     enableBlur={true}
