@@ -1,10 +1,10 @@
 .shiny_text {
-    color: rgba(255, 255, 255, 0.76); /* Adjust this color to change intensity/style */
+    color: rgba(253, 242, 206, 0.76);
     background: linear-gradient(
             120deg,
-            rgba(255, 255, 255, 0) 40%,
-            rgba(255, 255, 255, 0.8) 50%,
-            rgba(255, 255, 255, 0) 60%
+            rgba(248, 198, 30, 0) 40%,
+            rgba(248, 198, 30, 0.8) 50%,
+            rgba(248, 198, 30, 0) 60%
     );
     background-size: 200% 100%;
     -webkit-background-clip: text;

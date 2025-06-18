@@ -6,13 +6,13 @@ export const ShinyText: React.FC<ShinyTextProps> = ({
     text,
     disabled = false,
     speed = 5,
-    className = '',
+    className,
 }) => {
     const animationDuration = `${speed}s`
 
     return (
         <div
-            className={getClassName(styles.shiny_text, disabled && styles.disabled)}
+            className={getClassName(styles.shiny_text, disabled && styles.disabled, className)}
             style={{ animationDuration }}
         >
             {text}

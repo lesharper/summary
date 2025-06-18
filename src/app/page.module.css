@@ -1,5 +1,6 @@
 .screen {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -17,5 +18,7 @@
 
 .text.text {
     color: white;
-    font-size: clamp(1.6rem, 4vw, 1.5rem);
+    font-size: clamp(0.5rem, 3vw, 1.7rem);
+
+    padding: 35px;
 }

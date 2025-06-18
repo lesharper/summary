@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+    gap: clamp(0.5rem, 1vw, 15px);
+    width: 100%;
+}
+
+.card.card {
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+.text.text {
+    display: flex;
+    align-items: center;
+    line-clamp: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+
+
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
